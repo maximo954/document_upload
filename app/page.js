@@ -1,12 +1,5 @@
 "use client";
-import Button from "@/components/button";
-import DropZone from "@/components/drop_zone";
-import DropDownMenu from "@/components/drop_down_menu";
-import Loader from "@/components/loader";
-import RadioButton from "@/components/radio_button";
-import ToggleButton from "@/components/toggle";
-import TestCenter from "@/components/testing_center";
-import Icon from "@/components/icon";
+import { Button, DropZone, DropDownMenu, Loader, RadioButton, ToggleButton, TestCenter, Icon } from "@/components";
 
 const selections = ["Driver Report", "Client Report", "Admin Report"];
 const icon_path = "M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z";
@@ -107,10 +100,10 @@ export default function Home() {
               />
 
               <div className="flex flex-col gap-4">
-                <TestCenter num="1" style="text-gray-500 text-sm ml-2" />
-                <TestCenter num="2" style="text-gray-500 text-sm ml-2" />
-                <TestCenter num="3" style="text-gray-500 text-sm ml-2" />
-                <TestCenter num="4" style="text-gray-500 text-sm ml-2" />
+                <TestCenter num="1" style="text-gray-500 text-sm" />
+                <TestCenter num="2" style="text-gray-500 text-sm" />
+                <TestCenter num="3" style="text-gray-500 text-sm" />
+                <TestCenter num="4" style="text-gray-500 text-sm" />
               </div>
             </div>
           </div>
