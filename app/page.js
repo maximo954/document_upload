@@ -47,8 +47,8 @@ export default function Home() {
                 </p>
                 <DropZone />
                 <hr className="h-px w-full mt-6 mb-4 border-0 dark:bg-gray-200"></hr>
-                <Loader />
-                <hr className="h-px w-full mt-4 mb-4 border-0 dark:bg-gray-200"></hr>
+                {/* <Loader />
+                <hr className="h-px w-full mt-4 mb-4 border-0 dark:bg-gray-200"></hr> */}
               </div>
               <hr className="h-px w-1/2 mt-6 mb-4 border-0 dark:bg-gray-300"></hr>
               <h1 className="mb-4 font-bold text-gray-500">

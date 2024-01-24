@@ -2,6 +2,7 @@ import React, { useCallback, useState } from "react";
 import { useDropzone } from "react-dropzone";
 import Button from "./button";
 import Icon from "./icon";
+import Loader from "./loader";
 
 const path =
   "M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m6.75 12-3-3m0 0-3 3m3-3v6m-1.5-15H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z";
@@ -20,7 +21,7 @@ const DropZone = () => {
   const { getRootProps, getInputProps } = useDropzone({ onDrop });
   const selected_images = selectedImages?.map((file) => (
     <div>
-      <img src={file.preview} className="w-[100px]" alt="" />
+      <Loader key={file.path} file={file.path} size={file.size} image={<img src={file.preview} className="w-[50px] mr-4" alt={file.path}/>}/>
     </div>
   ));
 
@@ -39,7 +40,6 @@ const DropZone = () => {
                   <span className="font-bold text-gray-500"> Browse</span>
                 </p>
               </div>
-              <div className="pb-3">{selected_images}</div>
             </div>
             <Button
               style="px-5 py-2.5 text-sm font-medium text-center w-60 mt-4 text-white bg-blue-900 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800"
@@ -48,6 +48,9 @@ const DropZone = () => {
           </div>
         </div>
       </div>
+      <hr className="h-px w-full mt-4 mb-4 border-0 dark:bg-gray-200"></hr>
+      <div className="pb-3">{selected_images}</div>
+      
     </div>
   );
 };
