@@ -1,13 +1,16 @@
 import React from "react";
+import Icon from "./icon";
 
-const Button = ({label, style}) => {
+const Button = ({label, style, action, color, size, path}) => {
   return (
-    <div>
+    <div className={style}>
       <button
         type="submit"
-        className={style}
+        
+        onClick={action}
       >
-        {label}
+        {label ? label : ''}
+        {path ? <Icon color={color} size={size} path={path}/> : ''}
       </button>
     </div>
   );
